@@ -1,26 +1,25 @@
-package en.decorar;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.swing.JFrame;
-
-import java.awt.GridBagLayout;
-
-import javax.swing.JTextField;
+package en.cliente;
 
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+
+import en.decorar.Verbo;
 
 
 public class Principal extends JFrame {
 	public Principal() {
+		
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0, 0};
 		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0};
@@ -81,9 +80,9 @@ public class Principal extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				List<Verbo> extracted = extracted();
 				
-				lbResPresente.setText(extracted.get(0).verboPresente); 
-				lbResPassado.setText(extracted.get(0).verboPassado); 
-				lbResParticipativo.setText(extracted.get(0).verboPassado); 
+				lbResPresente.setText(extracted.get(0).getVerboPresente()); 
+				lbResPassado.setText(extracted.get(0).getVerboPassado()); 
+				lbResParticipativo.setText(extracted.get(0).getVerboParticipativo()); 
 				
 			}
 		});
@@ -114,8 +113,8 @@ public class Principal extends JFrame {
 		gbc_lbResParticipativo.gridy = 3;
 		getContentPane().add(lbResParticipativo, gbc_lbResParticipativo);
 		
-		setVisible(true);
 		setPreferredSize(new Dimension(400,400));
+		setVisible(true);
 	}
 	
 	private static final long serialVersionUID = 1L;
