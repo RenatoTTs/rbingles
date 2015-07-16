@@ -92,29 +92,30 @@ public class Principal extends JFrame {
 		gbc_btFeito.gridy = 1;
 		getContentPane().add(btFeito, gbc_btFeito);
 		
-		lbResPresente = new JLabel("New label");
+		lbResPresente = new JLabel("");
 		GridBagConstraints gbc_lbResPresente = new GridBagConstraints();
 		gbc_lbResPresente.insets = new Insets(0, 0, 0, 5);
 		gbc_lbResPresente.gridx = 0;
 		gbc_lbResPresente.gridy = 3;
 		getContentPane().add(lbResPresente, gbc_lbResPresente);
 		
-		lbResPassado = new JLabel("New label");
+		lbResPassado = new JLabel("");
 		GridBagConstraints gbc_lbResPassado = new GridBagConstraints();
 		gbc_lbResPassado.insets = new Insets(0, 0, 0, 5);
 		gbc_lbResPassado.gridx = 1;
 		gbc_lbResPassado.gridy = 3;
 		getContentPane().add(lbResPassado, gbc_lbResPassado);
 		
-		lbResParticipativo = new JLabel("New label");
+		lbResParticipativo = new JLabel("");
 		GridBagConstraints gbc_lbResParticipativo = new GridBagConstraints();
 		gbc_lbResParticipativo.insets = new Insets(0, 0, 0, 5);
 		gbc_lbResParticipativo.gridx = 2;
 		gbc_lbResParticipativo.gridy = 3;
 		getContentPane().add(lbResParticipativo, gbc_lbResParticipativo);
 		
-		setPreferredSize(new Dimension(400,400));
-		setVisible(true);
+		
+		
+		
 	}
 	
 	private static final long serialVersionUID = 1L;
@@ -129,7 +130,10 @@ public class Principal extends JFrame {
 
 	public static void main(String[] args) {
 		
-		new Principal();
+		Principal tela= new Principal();
+		tela.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		tela.setSize(400,400);
+		tela.setVisible(true);
 		
 	}
 
